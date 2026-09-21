@@ -184,58 +184,6 @@
 
 }
 
-
-
-.icons {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: var(--secondary);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-}
-
-.icon-email {
-    -webkit-mask-image: url('/icons/mail-open-outline.svg');
-    mask-image: url('/icons/mail-open-outline.svg');
-}
-
-.icon-eye {
-    -webkit-mask-image: url('/icons/eye-outline.svg');
-    mask-image: url('/icons/eye-outline.svg');
-    cursor: pointer;
-
-}
-
-.icon-forward {
-    -webkit-mask-image: url('/icons/arrow-forward-outline.svg');
-    mask-image: url('/icons/arrow-forward-outline.svg');
-    background-color: var(--secondary-container);
-}
-
-.icon-google {
-    -webkit-mask-image: url('/icons/logo-google.svg');
-    mask-image: url('/icons/logo-google.svg');
-    background-color: var(--accent-gold-light);
-}
-
-.icon-Apple {
-    -webkit-mask-image: url('/icons/logo-apple.svg');
-    mask-image: url('/icons/logo-apple.svg');
-    background-color: var(--accent-gold-light);
-}
-
-.icon-lock {
-    width: 15px;
-    height: 15px;
-    -webkit-mask-image: url('/icons/lock-closed-outline.svg');
-    mask-image: url('/icons/lock-closed-outline.svg');
-}
-
 .background {
     width: 100vw;
     background-color: var(--background);

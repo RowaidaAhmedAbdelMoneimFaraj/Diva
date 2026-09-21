@@ -1,0 +1,96 @@
+<div class="background">
+    <div class="container">
+        <!-- [formGroup]="loginForm" (ngSubmit)="onSubmit() -->
+        <form class="main-container" action="">
+            <div class="logo"><img src="/img/Small-Logo.png" alt="Logo"></div>
+            <div class="main-txt">
+                <h2>Join The Inner Circle</h2>
+                <p>Discover exclusive streetwear drops, elevated essentials, and a world of style made for your everyday
+                    confidence.</p>
+            </div>
+            <div class="inputField">
+                <label for="userFullName">Full Name</label>
+                <div class="input">
+                    <input type="text" name="userFullName" id="userFullName" placeholder="John Cena"
+                        formControlName="userFullName">
+                    <span class="icons icon-person"></span>
+                </div>
+                <!-- @if (loginForm.get('userEmail')?.hasError('required') &&
+                loginForm.get('userEmail')?.touched) {
+                <span class="error">Please Enter your Email !</span>
+                } -->
+            </div>
+            <div class="inputField">
+                <label for="userEmail">Email Address</label>
+                <div class="input">
+                    <input type="email" name="userEmail" id="userEmail" placeholder="name@domain.com"
+                        formControlName="userEmail">
+                    <span class="icons icon-email"></span>
+                </div>
+                <!-- @if (loginForm.get('userEmail')?.hasError('required') &&
+                loginForm.get('userEmail')?.touched) {
+                <span class="error">Please Enter your Email !</span>
+                } -->
+            </div>
+            <div class="inputField">
+                <label for="userPassword">Password</label>
+                <div class="input">
+                    <!-- [type]="showPassword ? 'text' : 'password'" -->
+                    <!-- (click)="displayPassword()" -->
+                    <input name="userPassword" id="userPassword" placeholder="Your Password"
+                        formControlName="userPassword">
+                    <span class="icons icon-eye"></span>
+                </div>
+                <!-- @if (loginForm.get('userPassword')?.hasError('required') &&
+                loginForm.get('userPassword')?.touched) {
+                <span class="error">Please Enter your Password !</span>
+                } -->
+            </div>
+            <div class="inputField">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input">
+                    <!-- [type]="showPassword ? 'text' : 'password'" -->
+                    <!-- (click)="displayPassword()" -->
+                    <input name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password"
+                        formControlName="confirmPassword">
+                    <span class="icons icon-eye"></span>
+                </div>
+                <!-- @if (loginForm.get('userPassword')?.hasError('required') &&
+                loginForm.get('userPassword')?.touched) {
+                <span class="error">Please Enter your Password !</span>
+                } -->
+            </div>
+            <div class="check">
+                <div class="checkPrivacy">
+                    <input type="checkbox" name="checkPrivacy" id="checkPrivacy">
+                    <label for="checkPrivacy">Receive private updates, atelier previews, and early access to invite-only
+                        drops.
+                    </label>
+                    <input type="checkbox" name="checkTerms" id="checkTerms">
+                    <label for="checkTerms">I agree to the <span>Membership Terms</span> and <span>Privacy Policy.</span></label>
+                </div>
+            </div>
+            <!-- [disabled]="loginForm.invalid" -->
+            <button class="createBtn" type="submit">Create Account
+                <span class="icons icon-forward"></span>
+            </button>
+            <p class="txt-separator">or register With</p>
+            <div class="social-btn">
+                <button class="social-account"><span class="icons icon-google"></span> Google</button>
+                <button class="social-account"><span class="icons icon-Apple"></span> Apple</button>
+            </div>
+            <div class="new-user">
+                <p>Already a member? <a routerLink="/register"> Sign In</a></p>
+            </div>
+        </form>
+        <div class="info">
+            <div class="lock">
+                <span class="icons icon-lock"></span>END-TO-END ENCRYPTED
+            </div>
+            <div class="privacy">
+                <span>PRIVACY</span>
+                <span>CONCIERGE</span>
+            </div>
+        </div>
+    </div>
+</div>

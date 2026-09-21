@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diva Streetwear — Join the Inner Circle</title>
+<!-- Google Fonts: Playfair Display & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&amp;family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with forms plugin -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration for Luxury Palette -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FAF6F0',
+              card: '#FFFFFF',
+              burgundy: '#460815',
+              burgundyHover: '#370510',
+              gold: '#B68238',
+              goldHover: '#9E6F2B',
+              inputBg: '#F5EFE9',
+              inputBorder: '#ECE3D9',
+              textMain: '#1A1817',
+              textMuted: '#68625D',
+              textLight: '#8C857E',
+              line: '#EAE3DA'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            brandTitle: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          boxShadow: {
+            'luxury': '0 20px 45px -12px rgba(60, 40, 30, 0.08), 0 4px 16px -2px rgba(60, 40, 30, 0.03)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-elements">
+    /* Subtle custom radio and checkbox accents matching the brand theme */
+    .custom-checkbox {
+      border: 1.5px solid #D5CBC0;
+      background-color: #FAF7F2;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+    .custom-checkbox:checked {
+      background-color: #460815;
+      border-color: #460815;
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    }
+    .custom-checkbox:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(182, 130, 56, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-textMain font-sans antialiased min-h-screen flex flex-col justify-between items-center px-4 py-8 md:py-14 selection:bg-brand-burgundy selection:text-white">
+<!-- BEGIN: MainRegistrationCard -->
+<main class="w-full max-w-[490px] bg-brand-card rounded-2xl shadow-luxury px-7 py-9 md:px-10 md:py-11 border border-[#F3ECE4]" data-purpose="registration-card">
+<!-- BEGIN: BrandHeader -->
+<header class="flex flex-col items-center text-center mb-7" data-purpose="brand-identity">
+<!-- Crown Coronet Icon -->
+<div class="mb-2 text-brand-gold opacity-95 flex items-center justify-center">
+<svg class="w-9 h-6" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" viewbox="0 0 40 26" width="40" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 21L6 7L13.5 14L20 4L26.5 14L34 7L37 21H3Z"></path>
+<circle cx="20" cy="4" fill="currentColor" r="0.8"></circle>
+<circle cx="6" cy="7" fill="currentColor" r="0.8"></circle>
+<circle cx="34" cy="7" fill="currentColor" r="0.8"></circle>
+</svg>
+</div>
+<!-- Brand Wordmark -->
+<h1 class="font-serif italic text-4xl md:text-[42px] tracking-normal font-semibold text-brand-burgundy leading-none mb-2">
+        Diva
+      </h1>
+<!-- Brand Subtitle / Metadata -->
+<div class="flex items-center justify-center space-x-2 text-[10.5px] uppercase tracking-[0.28em] text-brand-textMuted font-medium">
+<span>Streetwear</span>
+<span class="inline-block w-1 h-1 rounded-full bg-brand-gold"></span>
+<span>Est. 2026</span>
+</div>
+<!-- Section Title & Description -->
+<div class="mt-7">
+<h2 class="font-serif text-[26px] md:text-[28px] font-medium text-brand-textMain leading-snug">
+          Join the Inner Circle
+        </h2>
+<p class="text-[13px] text-brand-textMuted mt-2 max-w-[340px] leading-relaxed font-normal">
+          Unlock private streetwear drops, bespoke tailoring services, and VIP event access.
+        </p>
+</div>
+</header>
+<!-- END: BrandHeader -->
+<!-- BEGIN: RegistrationForm -->
+<form action="#" class="space-y-4" data-purpose="signup-form" method="POST">
+<!-- Field: Full Name -->
+<div data-purpose="input-group">
+<label class="block text-xs font-medium text-brand-textMain mb-1.5 ml-0.5" for="full-name">
+          Full Name
+        </label>
+<div class="relative">
+<input class="w-full bg-brand-inputBg border border-transparent focus:border-brand-gold/60 focus:bg-white focus:ring-0 rounded-lg px-3.5 py-2.5 text-sm text-brand-textMain placeholder-[#B0A79E] transition duration-200" id="full-name" name="full-name" placeholder="Victoria Sterling" required="" type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-[#9F968E]">
+<!-- User Icon -->
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Field: Email Address -->
+<div data-purpose="input-group">
+<label class="block text-xs font-medium text-brand-textMain mb-1.5 ml-0.5" for="email">
+          Email Address
+        </label>
+<div class="relative">
+<input class="w-full bg-brand-inputBg border border-transparent focus:border-brand-gold/60 focus:bg-white focus:ring-0 rounded-lg px-3.5 py-2.5 text-sm text-brand-textMain placeholder-[#B0A79E] transition duration-200" id="email" name="email" placeholder="name@domain.com" required="" type="email"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-[#9F968E]">
+<!-- Mail Icon -->
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24">
+<path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Field: Password -->
+<div data-purpose="input-group">
+<label class="block text-xs font-medium text-brand-textMain mb-1.5 ml-0.5" for="password">
+          Create Password
+        </label>
+<div class="relative">
+<input class="w-full bg-brand-inputBg border border-transparent focus:border-brand-gold/60 focus:bg-white focus:ring-0 rounded-lg px-3.5 py-2.5 text-sm text-brand-textMain placeholder-[#B0A79E] transition duration-200" id="password" name="password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-[#9F968E] hover:text-brand-textMain focus:outline-none" id="togglePassword" type="button">
+<!-- Eye Toggle Icon -->
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24">
+<path d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Field: VIP Invitation Code (Optional Luxury Touch) -->
+<div data-purpose="input-group">
+<div class="flex items-center justify-between mb-1.5 ml-0.5">
+<label class="block text-xs font-medium text-brand-textMain" for="invite-code">
+            Invitation / Member Pass Code
+          </label>
+<span class="text-[11px] text-brand-textLight">Optional</span>
+</div>
+<div class="relative">
+<input class="w-full bg-brand-inputBg border border-transparent focus:border-brand-gold/60 focus:bg-white focus:ring-0 rounded-lg px-3.5 py-2.5 text-sm uppercase tracking-wider text-brand-textMain placeholder-[#B0A79E] transition duration-200" id="invite-code" name="invite-code" placeholder="e.g. DIVA-PRIVÉ-2026" type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-[#9F968E]">
+<!-- Sparkle / Pass Icon -->
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24">
+<path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Checkboxes & Agreements -->
+<div class="pt-1 space-y-2.5" data-purpose="terms-checkboxes">
+<!-- Drops opt-in -->
+<label class="flex items-start cursor-pointer select-none">
+<input checked="" class="custom-checkbox h-4 w-4 mt-0.5 text-brand-burgundy rounded border-[#D5CBC0]" name="newsletter" type="checkbox"/>
+<span class="ml-2.5 text-[12px] text-brand-textMuted leading-tight">
+            Receive private allocations, atelier previews, and invite-only drop dates.
+          </span>
+</label>
+<!-- Legal terms acceptance -->
+<label class="flex items-start cursor-pointer select-none">
+<input class="custom-checkbox h-4 w-4 mt-0.5 text-brand-burgundy rounded border-[#D5CBC0]" name="terms" required="" type="checkbox"/>
+<span class="ml-2.5 text-[12px] text-brand-textMuted leading-tight">
+            I agree to the <a class="text-brand-gold hover:underline" href="#">Membership Terms</a> and <a class="text-brand-gold hover:underline" href="#">Privacy Policy</a>.
+          </span>
+</label>
+</div>
+<!-- Submit Button -->
+<div class="pt-2">
+<button class="w-full bg-brand-burgundy hover:bg-brand-burgundyHover text-white py-3.5 px-4 rounded-lg font-medium text-sm tracking-wide transition duration-200 flex items-center justify-center space-x-2 shadow-sm" type="submit">
+<span>Create Account</span>
+<svg class="w-4 h-4 ml-0.5 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</form>
+<!-- END: RegistrationForm -->
+<!-- BEGIN: AlternativeSignUp -->
+<section class="mt-6" data-purpose="social-registration">
+<!-- Divider -->
+<div class="relative flex items-center justify-center mb-5">
+<div class="border-t border-[#EFEAE3] w-full"></div>
+<span class="bg-brand-card px-3 text-[10px] tracking-[0.2em] font-medium text-brand-textLight uppercase whitespace-nowrap">
+          Or Register With
+        </span>
+<div class="border-t border-[#EFEAE3] w-full"></div>
+</div>
+<!-- Social Buttons (Apple & Google) -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Google Button -->
+<button class="flex items-center justify-center space-x-2.5 bg-brand-inputBg hover:bg-[#EFE7DE] border border-transparent hover:border-[#E2D8CC] rounded-lg py-2.5 px-4 text-xs font-medium text-brand-textMain transition duration-150" type="button">
+<!-- Authentic Google G Icon -->
+<svg class="w-4 h-4 shrink-0" viewbox="0 0 24 24">
+<path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path>
+<path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" fill="#34A853"></path>
+<path d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z" fill="#FBBC05"></path>
+<path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" fill="#EA4335"></path>
+</svg>
+<span class="tracking-wide">Google</span>
+</button>
+<!-- Apple Button -->
+<button class="flex items-center justify-center space-x-2 bg-brand-inputBg hover:bg-[#EFE7DE] border border-transparent hover:border-[#E2D8CC] rounded-lg py-2.5 px-4 text-xs font-medium text-brand-textMain transition duration-150" type="button">
+<!-- Apple Icon -->
+<svg class="w-4 h-4 shrink-0 text-black fill-current" viewbox="0 0 170 170">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.7-7.93-12.04-14.55-6.19-9.44-11.02-20.15-14.5-32.14-3.47-11.99-5.21-23.23-5.21-33.73 0-14.99 3.73-27.18 11.19-36.56 7.46-9.38 16.74-14.15 27.84-14.32 4.93 0 10.39 1.34 16.39 4.02 6 2.68 9.87 4.09 11.61 4.23 2.14-.27 6.26-1.77 12.37-4.51 6.11-2.73 11.45-3.95 16.02-3.66 12.38.77 22.25 5.34 29.62 13.72-10.89 6.59-16.19 15.73-15.9 27.42.3 9.4 3.99 17.26 11.09 23.58 7.09 6.32 15.42 10.02 24.97 11.11-2.14 6.78-4.8 13.62-7.98 20.51zM119.22 31.81c0-7.39 2.68-14.28 8.04-20.67 5.36-6.39 12.01-10.42 19.95-12.08.38 2.05.57 3.92.57 5.61 0 7.42-2.75 14.39-8.25 20.91-5.5 6.53-12.18 10.37-20.04 11.53-.08-1.52-.27-3.29-.27-5.3z"></path>
+</svg>
+<span class="tracking-wide">Apple</span>
+</button>
+</div>
+<!-- Card Sub-Footer Prompt -->
+<div class="mt-7 pt-4 border-t border-[#F2ECE5] text-center">
+<p class="text-[13px] text-brand-textMuted">
+          Already a member?
+          <a class="font-medium text-brand-burgundy hover:text-brand-gold transition duration-150 ml-1" href="#">
+            Sign In
+          </a>
+</p>
+</div>
+</section>
+<!-- END: AlternativeSignUp -->
+</main>
+<!-- END: MainRegistrationCard -->
+<!-- BEGIN: PageFooterSecurity -->
+<footer class="w-full max-w-[520px] mt-8 text-center" data-purpose="security-and-concierge-footer">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] tracking-[0.16em] uppercase text-brand-textLight font-medium px-4">
+<!-- Encryption Indicator -->
+<div class="flex items-center space-x-1.5">
+<svg class="w-3.5 h-3.5 text-brand-textLight opacity-80" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>End-to-End Encrypted</span>
+</div>
+<!-- Concierge & Legal Links -->
+<nav class="flex items-center space-x-2">
+<a class="hover:text-brand-burgundy transition-colors duration-150" href="#">Privacy</a>
+<span class="text-brand-gold">•</span>
+<a class="hover:text-brand-burgundy transition-colors duration-150" href="#">Concierge</a>
+</nav>
+</div>
+</footer>
+<!-- END: PageFooterSecurity -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="password-toggle">
+    // Simple script to toggle password visibility
+    const toggleButton = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    if (toggleButton && passwordInput) {
+      toggleButton.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        
+        // Slightly dim or alter icon when revealing
+        this.classList.toggle('text-brand-burgundy');
+      });
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

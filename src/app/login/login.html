@@ -1,6 +1,6 @@
 <div class="background">
     <div class="container">
-        <div class="main-container">
+        <form class="main-container" action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="logo"><img src="/img/Small-Logo.png" alt="Logo"></div>
             <div class="main-txt">
                 <h2>Welcome Back To Diva</h2>
@@ -10,16 +10,26 @@
             <div class="inputField">
                 <label for="userEmail">Email Address</label>
                 <div class="input">
-                    <input type="email" name="userEmail" id="userEmail" placeholder="name@domain.com">
+                    <input type="email" name="userEmail" id="userEmail" placeholder="name@domain.com"
+                        formControlName="userEmail">
                     <span class="icons icon-email"></span>
                 </div>
+                @if (loginForm.get('userEmail')?.hasError('required') &&
+                loginForm.get('userEmail')?.touched) {
+                <span class="error">Please Enter your Email !</span>
+                }
             </div>
             <div class="inputField">
                 <label for="userPassword">Password</label>
                 <div class="input">
-                    <input type="password" name="userPassword" id="userPassword" placeholder="Your Password">
-                    <span class="icons icon-eye"></span>
+                    <input [type]="showPassword ? 'text' : 'password'" name="userPassword" id="userPassword"
+                        placeholder="Your Password" formControlName="userPassword">
+                    <span class="icons icon-eye" (click)="displayPassword()"></span>
                 </div>
+                @if (loginForm.get('userPassword')?.hasError('required') &&
+                loginForm.get('userPassword')?.touched) {
+                <span class="error">Please Enter your Password !</span>
+                }
             </div>
             <div class="check">
                 <div class="remember">
@@ -28,18 +38,18 @@
                 </div>
                 <a routerLink="">Forgot Password</a>
             </div>
-            <a class="signBtn" routerLink="">Sign In
+            <button class="signBtn" type="submit" [disabled]="loginForm.invalid">Sign In
                 <span class="icons icon-forward"></span>
-            </a>
+            </button>
             <p class="txt-separator">or Continue With</p>
             <div class="social-btn">
                 <button class="social-account"><span class="icons icon-google"></span> Google</button>
                 <button class="social-account"><span class="icons icon-Apple"></span> Apple</button>
             </div>
             <div class="new-user">
-                <p>New to Diva? <a routerLink=""> Join the Inner Circle</a></p>
+                <p>New to Diva? <a routerLink="/register"> Join the Inner Circle</a></p>
             </div>
-        </div>
+        </form>
         <div class="info">
             <div class="lock">
                 <span class="icons icon-lock"></span>END-TO-END ENCRYPTED
