@@ -1,1 +1,191 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+  /* =========================
+     COLORS
+  ========================= */
+
+  /* Brand */
+  --primary: #6D1E2C;
+  --primary-dark: #4F0618;
+  --primary-light: #7C2A37;
+
+  --secondary: #635E54;
+  --secondary-container: #EAE1D5;
+
+  --accent-gold: #C9A24B;
+  --accent-gold-dark: #5B4300;
+  --accent-gold-light: #EBC166;
+
+  /* Surfaces */
+  --background: #FAF6F0;
+  --surface: #FDF9F3;
+  --surface-dim: #DD DAD4;
+  --surface-bright: #FDF9F3;
+
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low: #F7F3ED;
+  --surface-container: #F1EDE7;
+  --surface-container-high: #EBE8E2;
+  --surface-container-highest: #E6E2DC;
+
+  /* Text */
+  --text-primary: #1C1C18;
+  --text-secondary: #554243;
+  --text-on-primary: #FFFFFF;
+
+  /* Borders */
+  --outline: #877273;
+  --outline-variant: #DAC0C1;
+
+  /* Error */
+  --error: #BA1A1A;
+  --error-container: #FFDAD6;
+  --error-text: #93000A;
+
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
+  /* Font Families */
+  --font-display: "Noto Serif", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* Display */
+  --fs-display-lg: 56px;
+  --lh-display-lg: 64px;
+
+  --fs-display-mobile: 38px;
+  --lh-display-mobile: 46px;
+
+  /* Headlines */
+  --fs-headline-lg: 36px;
+  --lh-headline-lg: 44px;
+
+  --fs-headline-mobile: 28px;
+  --lh-headline-mobile: 36px;
+
+  --fs-headline-md: 26px;
+  --lh-headline-md: 34px;
+
+  /* Titles */
+  --fs-title-lg: 20px;
+  --lh-title-lg: 28px;
+
+  --fs-title-md: 16px;
+  --lh-title-md: 24px;
+
+  /* Body */
+  --fs-body-lg: 18px;
+  --lh-body-lg: 28px;
+
+  --fs-body-md: 15px;
+  --lh-body-md: 24px;
+
+  --fs-body-sm: 13px;
+  --lh-body-sm: 20px;
+
+  /* Labels */
+  --fs-label-lg: 14px;
+  --lh-label-lg: 20px;
+
+  --fs-label-sm: 11px;
+  --lh-label-sm: 16px;
+
+
+  /* =========================
+     FONT WEIGHTS
+  ========================= */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+
+  /* =========================
+     LETTER SPACING
+  ========================= */
+
+  --tracking-display: -0.02em;
+  --tracking-headline: -0.01em;
+
+  --tracking-label: 0.06em;
+  --tracking-label-wide: 0.10em;
+
+  --tracking-nav: 0.08em;
+
+
+  /* =========================
+     BORDER RADIUS
+  ========================= */
+
+  --radius-sm: 2px;
+  --radius-default: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+
+  /* =========================
+     SPACING
+  ========================= */
+
+  --gutter: 24px;
+  --gutter-mobile: 16px;
+
+  --margin: 48px;
+  --margin-mobile: 20px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 28px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+
+  /* =========================
+     LAYOUT
+  ========================= */
+
+  --max-width: 1360px;
+
+  --grid-columns-desktop: 12;
+  --grid-columns-tablet: 8;
+  --grid-columns-mobile: 4;
+
+
+  /* =========================
+     BORDERS & DIVIDERS
+  ========================= */
+
+  --border-primary: rgba(109, 30, 44, 0.15);
+  --border-primary-strong: rgba(109, 30, 44, 0.20);
+
+  --border-gold: rgba(201, 162, 75, 0.40);
+
+
+  /* =========================
+     SHADOWS
+  ========================= */
+
+  --shadow-soft:
+    0 12px 36px -8px rgba(109, 30, 44, 0.08);
+
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+}
