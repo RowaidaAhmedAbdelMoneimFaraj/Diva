@@ -1,7 +1,6 @@
 <div class="background">
     <div class="container">
-        <!-- [formGroup]="loginForm" (ngSubmit)="onSubmit() -->
-        <form class="main-container" action="">
+        <form class="main-container" action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="logo"><img src="/img/Small-Logo.png" alt="Logo"></div>
             <div class="main-txt">
                 <h2>Join The Inner Circle</h2>
@@ -15,10 +14,10 @@
                         formControlName="userFullName">
                     <span class="icons icon-person"></span>
                 </div>
-                <!-- @if (loginForm.get('userEmail')?.hasError('required') &&
-                loginForm.get('userEmail')?.touched) {
-                <span class="error">Please Enter your Email !</span>
-                } -->
+                @if (registerForm.get('userFullName')?.hasError('required') &&
+                registerForm.get('userFullName')?.touched) {
+                <span class="error">Please Enter your Full Name !</span>
+                }
             </div>
             <div class="inputField">
                 <label for="userEmail">Email Address</label>
@@ -27,51 +26,64 @@
                         formControlName="userEmail">
                     <span class="icons icon-email"></span>
                 </div>
-                <!-- @if (loginForm.get('userEmail')?.hasError('required') &&
-                loginForm.get('userEmail')?.touched) {
+                @if (registerForm.get('userEmail')?.hasError('required') && registerForm.get('userEmail')?.touched) {
                 <span class="error">Please Enter your Email !</span>
-                } -->
+                }
             </div>
             <div class="inputField">
                 <label for="userPassword">Password</label>
                 <div class="input">
-                    <!-- [type]="showPassword ? 'text' : 'password'" -->
-                    <!-- (click)="displayPassword()" -->
-                    <input name="userPassword" id="userPassword" placeholder="Your Password"
-                        formControlName="userPassword">
-                    <span class="icons icon-eye"></span>
+                    <input name="userPassword" [type]="showPassword ? 'text' : 'password'" id="userPassword"
+                        placeholder="Your Password" formControlName="userPassword">
+                    <span class="icons icon-eye" (click)="displayPassword()"></span>
+
                 </div>
-                <!-- @if (loginForm.get('userPassword')?.hasError('required') &&
-                loginForm.get('userPassword')?.touched) {
-                <span class="error">Please Enter your Password !</span>
-                } -->
+                @if (registerForm.get('userPassword')?.hasError('pattern') && registerForm.get('userPassword')?.touched)
+                {
+                <span class="error">
+                    Password must contain at least 8 characters, including uppercase,
+                    lowercase, number, and special character.
+                </span>
+                }
+                @if(registerForm.get('userPassword')?.hasError('required') &&
+                registerForm.get('userPassword')?.touched){
+                <span class="error">Please Enter Your Password !</span>
+                }
             </div>
             <div class="inputField">
                 <label for="confirmPassword">Confirm Password</label>
                 <div class="input">
-                    <!-- [type]="showPassword ? 'text' : 'password'" -->
-                    <!-- (click)="displayPassword()" -->
-                    <input name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password"
-                        formControlName="confirmPassword">
-                    <span class="icons icon-eye"></span>
+                    <input [type]="showConfirmingpassword ? 'text' : 'password'" name="confirmPassword"
+                        id="confirmPassword" placeholder="Confirm Your Password" formControlName="confirmPassword">
+                    <span class="icons icon-eye" (click)="displayConfirmedpassword()"></span>
                 </div>
-                <!-- @if (loginForm.get('userPassword')?.hasError('required') &&
-                loginForm.get('userPassword')?.touched) {
-                <span class="error">Please Enter your Password !</span>
-                } -->
+                @if (registerForm.get('confirmPassword')?.touched &&
+                registerForm.get('confirmPassword')?.hasError('required')) {
+                <span class="error">Please Confirm Your Password !</span>
+                } @else if (registerForm.get('confirmPassword')?.value && registerForm.hasError('mismatch')) {
+                <span class="error">Password Isn't Confirmed !</span>
+                } @else if (registerForm.get('confirmPassword')?.value && registerForm.get('userPassword')?.valid) {
+                <span class="true">Password is Confirmed !</span>
+                }
             </div>
             <div class="check">
                 <div class="checkPrivacy">
-                    <input type="checkbox" name="checkPrivacy" id="checkPrivacy">
-                    <label for="checkPrivacy">Receive private updates, atelier previews, and early access to invite-only
-                        drops.
-                    </label>
-                    <input type="checkbox" name="checkTerms" id="checkTerms">
-                    <label for="checkTerms">I agree to the <span>Membership Terms</span> and <span>Privacy Policy.</span></label>
+                    <div class="first-check">
+                        <input type="checkbox" name="checkPrivacy" id="checkPrivacy">
+                        <label for="checkPrivacy">Receive private updates, atelier previews, and early access to
+                            invite-only
+                            drops.
+                        </label>
+                    </div>
+                    <div class="second-check">
+                        <input type="checkbox" name="checkTerms" id="checkTerms">
+                        <label for="checkTerms">I agree to the <span>Membership Terms</span> and <span>Privacy
+                                Policy.</span></label>
+                    </div>
                 </div>
             </div>
-            <!-- [disabled]="loginForm.invalid" -->
-            <button class="createBtn" type="submit">Create Account
+
+            <button class="createBtn" type="submit" [disabled]="registerForm.invalid"  routerLink="/home"> Create Account
                 <span class="icons icon-forward"></span>
             </button>
             <p class="txt-separator">or register With</p>
@@ -80,7 +92,7 @@
                 <button class="social-account"><span class="icons icon-Apple"></span> Apple</button>
             </div>
             <div class="new-user">
-                <p>Already a member? <a routerLink="/register"> Sign In</a></p>
+                <p>Already a member? <a routerLink="/login"> Sign In</a></p>
             </div>
         </form>
         <div class="info">

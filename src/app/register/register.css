@@ -184,13 +184,72 @@
 
 }
 
+.icons {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+.icon-person{
+    -webkit-mask-image: url('/icons/person.svg');
+    mask-image: url('/icons/person.svg');
+}
+.icon-email {
+    -webkit-mask-image: url('/icons/mail-open-outline.svg');
+    mask-image: url('/icons/mail-open-outline.svg');
+}
+
+.icon-eye {
+    -webkit-mask-image: url('/icons/eye-outline.svg');
+    mask-image: url('/icons/eye-outline.svg');
+    cursor: pointer;
+
+}
+
+.icon-forward {
+    -webkit-mask-image: url('/icons/arrow-forward-outline.svg');
+    mask-image: url('/icons/arrow-forward-outline.svg');
+    background-color: var(--secondary-container);
+}
+
+.icon-google {
+    -webkit-mask-image: url('/icons/logo-google.svg');
+    mask-image: url('/icons/logo-google.svg');
+    background-color: var(--accent-gold-light);
+}
+
+.icon-Apple {
+    -webkit-mask-image: url('/icons/logo-apple.svg');
+    mask-image: url('/icons/logo-apple.svg');
+    background-color: var(--accent-gold-light);
+}
+
+.icon-lock {
+    width: 15px;
+    height: 15px;
+    -webkit-mask-image: url('/icons/lock-closed-outline.svg');
+    mask-image: url('/icons/lock-closed-outline.svg');
+}
+
+
+
+body{
+    min-height: 100dvh;
+}
+
 .background {
-    width: 100vw;
+    width: 100%;
     background-color: var(--background);
-    height: 100vh;
+    height: 120vh;
     position: relative;
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
     justify-content: center;
     align-items: center;
 }
@@ -203,23 +262,25 @@
     position: relative;
     width: 100%;
     max-width: 500px;
-    height: 90%;
+    height: 100%;
 }
 
 .main-container {
+    flex: 1;
     width: 100%;
     height: 100%;
-    max-height: 90vh;
+    max-height: 110vh;
     border-radius: 5px;
     box-shadow: var(--shadow-soft);
     border: 0.1px solid var(--border-primary);
     background-color: var(--surface-container-lowest);
+    min-height: 250px;
 }
 
 .logo {
     position: relative;
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     margin: 0 auto;
     height: 30%;
 }
@@ -236,7 +297,7 @@
 .main-txt {
     text-align: center;
     width: 70%;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .main-txt h2 {
@@ -304,17 +365,14 @@
     align-items: center;
 }
 
-.check a {
-    color: var(--accent-gold) !important;
-    cursor: pointer;
-}
 
-.check .remember {
+.check .checkPrivacy {
     display: flex;
     gap: 5px;
+    flex-direction: column;
 }
 
-.check .remember input[type="checkbox"] {
+.check .checkPrivacy input[type="checkbox"] {
     appearance: none;
     width: 15px;
     height: 15px;
@@ -324,24 +382,32 @@
     cursor: pointer;
 }
 
-.check .remember input[type="checkbox"]:checked {
+.check .checkPrivacy input[type="checkbox"]:checked {
     background-color: var(--primary);
     border-color: var(--primary);
 }
 
-.check .remember label,
+.check .checkPrivacy label,
 .check a {
     color: var(--secondary);
     font-family: var(--font-body);
     font-size: var(--fs-body-sm);
 }
-
-.signBtn {
+.first-check,.second-check{
+    display: flex;
+    gap: 10px;
+}
+.second-check label span{
+    color: var(--primary-light);
+    font-weight: var(--fw-semibold);
+}
+.createBtn {
     display: flex;
     margin: 10px auto;
     width: 72%;
     margin-left: 14%;
     margin-right: 14%;
+    border: none;
     padding: 10px 20px;
     justify-content: center;
     align-items: center;
@@ -354,23 +420,23 @@
     cursor: pointer;
 }
 
-.signBtn span {
+.createBtn span {
     transition: transform .2s ease;
 }
 
-.signBtn span::after {
+.createBtn span::after {
     content: '';
     position: absolute;
 }
 
-.signBtn:is(:hover, :focus) span {
+.createBtn:is(:hover, :focus) span {
     transform: translateX(5px);
 }
 
 .txt-separator {
     width: 72%;
     position: relative;
-    margin: 15px auto;
+    margin: 10px auto;
     text-align: center;
     letter-spacing: 1px;
     color: var(--outline);
@@ -399,7 +465,8 @@
     top: 50%;
     right: -12%;
 }
-.social-btn{
+
+.social-btn {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -408,7 +475,8 @@
     margin: 10px auto;
     gap: 5px;
 }
-.social-btn .social-account{
+
+.social-btn .social-account {
     padding: 10px 55px;
     display: flex;
     justify-content: center;
@@ -420,14 +488,16 @@
     gap: 5px;
     cursor: pointer;
     font-weight: 500;
-    transition: box-shadow .2s ease-in-out ;
+    transition: box-shadow .2s ease-in-out;
 }
-.social-btn .social-account:is(:hover,:visited){
+
+.social-btn .social-account:is(:hover, :visited) {
     box-shadow: var(--shadow-soft);
 }
-.new-user{
+
+.new-user {
     width: 70%;
-    margin: 20px auto;
+    margin: 10px auto;
     max-height: 50px;
     height: 100%;
     display: flex;
@@ -438,12 +508,14 @@
     border-top: 0.1px solid var(--secondary-container);
     font-size: var(--fs-body-sm);
 }
-.new-user a{
+
+.new-user a {
     color: var(--primary-dark);
     font-weight: var(--fw-semibold);
     cursor: pointer;
 }
-.info{
+
+.info {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -451,7 +523,8 @@
     gap: 10px;
     margin-top: 10px;
 }
-.info .lock{
+
+.info .lock {
     display: flex;
     gap: 5px;
     font-family: var(--font-body);
@@ -460,11 +533,20 @@
     color: var(--outline);
     font-weight: var(--fw-regular);
 }
-.privacy{
+
+.privacy {
     display: flex;
     gap: 15px;
 }
 .privacy span{
+    cursor: pointer;
+    transition: color .2s ease ;
+}
+.privacy span:hover{
+    color: var(--primary-light);
+}
+
+.privacy span {
     font-family: var(--font-body);
     font-size: 12px;
     letter-spacing: 1px;
@@ -472,9 +554,16 @@
     font-weight: var(--fw-regular);
 
 }
-.error{
+
+.error {
     font-size: var(--fs-body-sm);
     font-family: var(--font-display);
     color: var(--error-text);
+    letter-spacing: 1px;
+}
+.true {
+    font-size: var(--fs-body-sm);
+    font-family: var(--font-display);
+    color: green;
     letter-spacing: 1px;
 }
